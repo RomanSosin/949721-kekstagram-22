@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Роман](https://up.htmlacademy.ru/javascript/22/user/949721).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий](https://htmlacademy.ru/profile/id1378855).
 
 ---
 

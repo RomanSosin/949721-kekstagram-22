@@ -17,7 +17,7 @@ getRandomIntInclusive(1, 10)
 // Функция для проверки максимальной длины строки.
 
 const isStringLengthValid = function(commentString, max) {
-    return commentString.length > max
+  return commentString.length > max
 }
 
 isStringLengthValid('Функция для проверки максимальной длины строки', 10);

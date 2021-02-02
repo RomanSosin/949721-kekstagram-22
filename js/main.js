@@ -12,6 +12,8 @@ const getRandomIntInclusive = function(min, max) {
   }
 }
 
+getRandomIntInclusive(1, 10)
+
 // Функция для проверки максимальной длины строки.
 
 const getCommentStringsLength = function(commentString, max) {

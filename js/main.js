@@ -8,22 +8,17 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }//Максимум и минимум включаются
   else {
-    console.log('Введите диапазон от нуля до ...');
+    return console.log('Введите диапазон от нуля до ...');
   }
 }
-
-console.log(getRandomIntInclusive(1, 10));
-
 
 // Функция для проверки максимальной длины строки.
 
 function getCommentStringsLength(commentString, max) {
-	if (commentString.length > max) {
-    console.log('Строка больше ' + max + ' символов')
+  if (commentString.length > max) {
+    return console.log('Строка больше ' + max + ' символов');
   }
   else {
-    console.log('Строка меньше ' + max + ' символов');
+    return console.log('Строка меньше ' + max + ' символов');
   }
 }
-
-console.log(getCommentStringsLength('Функция для проверки максимальной длины строки', 10));

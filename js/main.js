@@ -75,10 +75,10 @@ const getRandomComment = () => {
     avatar: 'img/avatar-' + getRandomIntInclusive(1, 6) + '.svg',
     message: getRandomComments(),
     name: getRandomNames(),
-  }
-}
+  };
+};
 
-const CREATE_COMMENTS_COUNT = 25;
+const CREATE_COMMENTS_COUNT = 2;
 
 const creatRandomComments = new Array(CREATE_COMMENTS_COUNT).fill(null).map(() => getRandomComment());
 
@@ -91,6 +91,8 @@ const descriptionPhoto = {
   comments: createRandomComments;
 }
 
-const CREATE_ARRAY_COUNT = 2;
+const CREATE_ARRAY_COUNT = 5;
 
 const createArray = new Array(CREATE_ARRAY_COUNT).fill(null).map(() => descriptionPhoto());
+
+createArray;

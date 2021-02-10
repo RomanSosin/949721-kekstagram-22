@@ -69,30 +69,31 @@ const getRandomNames = () => {
   return createRandomDescription(NAMES);
 }
 
-const getRandomComment = () => {
-  return {
-    id: 135,
-    avatar: 'img/avatar-' + getRandomIntInclusive(1, 6) + '.svg',
+const commentArray = [];
+
+for (let j = 1; j <= 2; j++) {
+  commentArray.push({
+    id: j,
+    avatar: 'img/avatar-' + getRandomIntInclusive(1, 4) + '.svg',
     message: getRandomComments(),
     name: getRandomNames(),
-  };
+  });
 };
-
-const CREATE_COMMENTS_COUNT = 2;
 
 const creatRandomComments = new Array(CREATE_COMMENTS_COUNT).fill(null).map(() => getRandomComment());
 
 
-const descriptionPhoto = {
-  id: getRandomIntInclusive(1, 25),
-  url: 'photos/' + getRandomIntInclusive(1, 25) + '.jpg',
-  description: getRandomDescription(),
-  likes: getRandomIntInclusive(15, 200),
-  comments: createRandomComments;
-}
-
 const CREATE_ARRAY_COUNT = 5;
 
-const createArray = new Array(CREATE_ARRAY_COUNT).fill(null).map(() => descriptionPhoto());
+const photoArray = [];
 
-createArray;
+for (let i = 1; i <= CREATE_ARRAY_COUNT; i++) {
+  photoArray.push({
+    id: i,
+    url: 'photos/' + i + '.jpg',
+    description: getRandomDescription(),
+    likes: getRandomIntInclusive(15, 200),
+    comments: commentArray,
+  });
+}
+

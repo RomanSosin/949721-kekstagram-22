@@ -87,3 +87,5 @@ const createPhotoArray = () => {
   }
   return photoArray;
 }
+
+createPhotoArray();

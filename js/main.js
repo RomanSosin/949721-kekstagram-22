@@ -61,25 +61,29 @@ const CREATE_PHOTO_COMMENT_COUNT = 2; //Счетчик объектов в ма�
 
 const CREATE_PHOTO_ARRAY_COUNT = 25; //Счетчик объектов в массиве с фото
 
-const commentArray = [];
-
-const photoArray = [];
-
-for (let j = 1; j <= CREATE_PHOTO_COMMENT_COUNT; j++) {
-  commentArray.push({
-    id: j,
-    avatar: 'img/avatar-' + getRandomIntInclusive(1, 4) + '.svg',
-    message: createRandomDescription(COMMENTS),
-    name: createRandomDescription(NAMES),
-  });
+const createCommentsArray = () => {
+  const commentArray = [];
+  for (let j = 1; j <= CREATE_PHOTO_COMMENT_COUNT; j++) {
+    commentArray.push({
+      id: j,
+      avatar: 'img/avatar-' + getRandomIntInclusive(1, 4) + '.svg',
+      message: createRandomDescription(COMMENTS),
+      name: createRandomDescription(NAMES),
+    });
+  }
+  return commentArray;
 }
 
-for (let i = 1; i <= CREATE_PHOTO_ARRAY_COUNT; i++) {
-  photoArray.push({
-    id: i,
-    url: 'photos/' + i + '.jpg',
-    description: createRandomDescription(DESCRIPTION),
-    likes: getRandomIntInclusive(15, 200),
-    comments: commentArray,
-  });
+const createPhotoArray = () => {
+  const photoArray = [];
+  for (let i = 1; i <= CREATE_PHOTO_ARRAY_COUNT; i++) {
+    photoArray.push({
+      id: i,
+      url: 'photos/' + i + '.jpg',
+      description: createRandomDescription(DESCRIPTION),
+      likes: getRandomIntInclusive(15, 200),
+      comments: createCommentsArray(),
+    });
+  }
+  return photoArray;
 }

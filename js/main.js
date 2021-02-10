@@ -9,8 +9,8 @@ const getRandomIntInclusive = function(min, max) {
   }//Максимум и минимум включаются
   else {
     return false;
-  }
-}
+  };
+};
 
 getRandomIntInclusive(1, 10)
 
@@ -18,11 +18,11 @@ getRandomIntInclusive(1, 10)
 
 const isStringLengthValid = function(commentString, max) {
   return commentString.length > max
-}
+};
 
 isStringLengthValid('Функция для проверки максимальной длины строки', 10);
 
-// Создаем рандомные массивы
+// Создаем рандомные массивы для генерации массивов
 
 const DESCRIPTION  = [
   'солнечный день',
@@ -31,17 +31,17 @@ const DESCRIPTION  = [
   'отдыхаем вместе',
   'лучшая прогулка',
   'вместе с друзьями',
-]
+];
 
 const NAMES = [
   'Иван',
-  'Хуан Себастьян',
+  'Хуан',
   'Мария',
-  'Кристоф',
+  'Ксения',
   'Виктор',
   'Юлия',
   'Люпита',
-  'Вашингтон',
+  'Борис',
 ];
 
 const COMMENTS = [
@@ -53,47 +53,35 @@ const COMMENTS = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 
-const createRandomDescription = (elements) => {
+const createRandomDescription = (elements) => { // Перемешиваем элементы массива
   return elements[getRandomIntInclusive(0, elements.length - 1)];
 };
 
-const getRandomDescription = () => {
-  return createRandomDescription(DESCRIPTION);
-}
+const CREATE_PHOTO_COMMENT_COUNT = 2; //Счетчик объектов в массиве с комментариями
 
-const getRandomComments = () => {
-  return createRandomDescription(COMMENTS);
-}
-
-const getRandomNames = () => {
-  return createRandomDescription(NAMES);
-}
+const CREATE_PHOTO_ARRAY_COUNT = 25; //Счетчик объектов в массиве с фото
 
 const commentArray = [];
 
-for (let j = 1; j <= 2; j++) {
+const photoArray = [];
+
+for (let j = 1; j <= CREATE_PHOTO_COMMENT_COUNT; j++) {
   commentArray.push({
     id: j,
     avatar: 'img/avatar-' + getRandomIntInclusive(1, 4) + '.svg',
-    message: getRandomComments(),
-    name: getRandomNames(),
+    message: createRandomDescription(COMMENTS),
+    name: createRandomDescription(NAMES),
   });
 };
 
-const creatRandomComments = new Array(CREATE_COMMENTS_COUNT).fill(null).map(() => getRandomComment());
-
-
-const CREATE_ARRAY_COUNT = 5;
-
-const photoArray = [];
-
-for (let i = 1; i <= CREATE_ARRAY_COUNT; i++) {
+for (let i = 1; i <= CREATE_PHOTO_ARRAY_COUNT; i++) {
   photoArray.push({
     id: i,
     url: 'photos/' + i + '.jpg',
-    description: getRandomDescription(),
+    description: createRandomDescription(DESCRIPTION),
     likes: getRandomIntInclusive(15, 200),
     comments: commentArray,
   });
-}
+};
 
+console.log(photoArray);

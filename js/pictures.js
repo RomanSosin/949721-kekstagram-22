@@ -6,7 +6,7 @@ const pictureTemplate = document.querySelector('#picture').content;
 const newPictureTemplate = pictureTemplate.querySelector('.picture');
 
 const createPicturesInHTML = () => {
-  for (let i = 0; i < photoArray.length, i++) {
+  for (let i = 0; i < photoArray.length; i++) {
     const newPicture = newPictureTemplate.cloneNode(true);
     newPicture.querySelector('.picture__img').src = photoArray[i].url;
     newPicture.querySelector('.picture__likes').textContent = photoArray[i].likes;

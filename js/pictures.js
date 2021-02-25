@@ -1,4 +1,4 @@
-import { createCommentsArray, createPhotoArray } from 'data.js';
+import { photoArray } from 'data.js';
 
 const pictureFragment = document.createDocumentFragment(); // Складываем сюда
 

@@ -73,4 +73,3 @@ export { createRandomDescription };
 export { CREATE_PHOTO_COMMENT_COUNT, CREATE_PHOTO_ARRAY_COUNT };
 export { createCommentsArray };
 export { createPhotoArray };
-export { photoArray }

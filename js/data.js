@@ -1,4 +1,4 @@
-import { getRandomIntInclusive } from 'util.js';
+import { getRandomIntInclusive } from './util.js';
 
 // Создаем рандомные массивы для генерации массивов
 
@@ -66,10 +66,13 @@ const createPhotoArray = () => {
   return photoArray;
 }
 
-createPhotoArray();
+const photoArray = createPhotoArray();
+const commentArray = createCommentsArray();
+
 
 export { DESCRIPTION, NAMES, COMMENTS };
 export { createRandomDescription };
 export { CREATE_PHOTO_COMMENT_COUNT, CREATE_PHOTO_ARRAY_COUNT };
 export { createCommentsArray };
 export { createPhotoArray };
+export { photoArray, commentArray };

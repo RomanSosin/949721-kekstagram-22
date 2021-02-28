@@ -1,2 +1,2 @@
 // точка входа
-import './data.js';
+import './pictures.js'; // Создаем фото и добавляем в DocumentFragment

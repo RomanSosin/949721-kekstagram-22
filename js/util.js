@@ -22,5 +22,12 @@ const isStringLengthValid = function(commentString, max) {
 
 isStringLengthValid('Функция для проверки максимальной длины строки', 10);
 
+// Функция для события с клавишей ESC
+
+const isEscEvent = (evt) => {
+  return evt.key === ('Escape' || 'Esc');
+};
+
 export { getRandomIntInclusive };
 export { isStringLengthValid };
+export { isEscEvent };

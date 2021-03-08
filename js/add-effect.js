@@ -19,6 +19,7 @@ let heatValue = '';
 
 // Слайдер от 0 до 1 с шагом 0.1
 const createSlider1 = () => {
+  // eslint-disable-next-line no-undef
   noUiSlider.create(sliderElement, {
     range: {
       min: 0,
@@ -42,6 +43,7 @@ const createSlider1 = () => {
 
 // Слайдер от 0 до 100 с шагом 1
 const createSlider2 = () => {
+  // eslint-disable-next-line no-undef
   noUiSlider.create(sliderElement, {
     range: {
       min: 0,
@@ -62,6 +64,7 @@ const createSlider2 = () => {
 
 // Слайдер от 0 до 3 с шагом 0.1
 const createSlider3 = () => {
+  // eslint-disable-next-line no-undef
   noUiSlider.create(sliderElement, {
     range: {
       min: 0,
@@ -85,6 +88,7 @@ const createSlider3 = () => {
 
 // Слайдер от 1 до 3 с шагом 0.1
 const createSlider4 = () => {
+  // eslint-disable-next-line no-undef
   noUiSlider.create(sliderElement, {
     range: {
       min: 1,
@@ -163,7 +167,6 @@ effectMarvin.addEventListener('click', () => {
 
   sliderElement.noUiSlider.on('update', (values, handle) => {
     sliderValue.value = values[handle];
-    console.log(sliderValue.value);
     marvinValue = sliderValue.value + '%';
     imagePreview.style.filter = `invert(${marvinValue})`;
   });

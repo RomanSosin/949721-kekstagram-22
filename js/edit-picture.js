@@ -6,8 +6,7 @@ let imagePreview = document.querySelector('.img-upload__preview');
 // Уменьшаем значение
 controlSmaller.addEventListener('click', () => {
   if (controlValue.value !== '25%') {
-  let newControlValue = parseInt(controlValue.value);
-  //if (newControlValue > 25) {
+    let newControlValue = parseInt(controlValue.value);
     controlValue.value = newControlValue - 25 + '%';
     let imageTransform = '0.' + parseInt(controlValue.value);
     imagePreview.style.transform = `scale(${imageTransform})`;

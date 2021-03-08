@@ -1,5 +1,6 @@
 import { isEscEvent } from './util.js';
 import { controlValue, imagePreview } from './edit-picture.js';
+import { destroySlider } from './add-effect.js';
 
 const uploadImage = document.querySelector('#upload-file');
 const uploadImageOverlay = document.querySelector('.img-upload__overlay');
@@ -12,6 +13,7 @@ const onPopupEscKeydown = (evt) => {
     closeUploadWindow();
   }
 }
+
 const openUploadWindow = () => {
   uploadImageOverlay.classList.remove('hidden');
   body.classList.add('modal-open');
@@ -22,8 +24,10 @@ const closeUploadWindow = () => {
   uploadImageOverlay.classList.add('hidden');
   body.classList.remove('modal-open');
   uploadImage.value = ''; // Сбрасываем на дефолтные значения окно и картинку
-  // controlValue.value = ''; Как сбросить на дефолт?
-  imagePreview.style.transform = '';
+  controlValue.reset; //Как сбросить на дефолт при нажатии на Enter?
+  imagePreview.style = '';
+  destroySlider();
+
   document.removeEventListener('keydown', onPopupEscKeydown);
 };
 

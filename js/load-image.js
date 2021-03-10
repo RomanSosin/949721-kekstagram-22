@@ -24,7 +24,7 @@ const closeUploadWindow = () => {
   uploadImageOverlay.classList.add('hidden');
   body.classList.remove('modal-open');
   uploadImage.value = ''; // Сбрасываем на дефолтные значения окно и картинку
-  controlValue.reset; //Как сбросить на дефолт при нажатии на Enter?
+  controlValue.value ='100%'; //Как сбросить на дефолт при нажатии на Enter?
   imagePreview.style = '';
   destroySlider();
 

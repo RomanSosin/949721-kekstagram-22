@@ -108,6 +108,7 @@ arraySlider.forEach((item) => {
 
     destroySlider();
 
+    // eslint-disable-next-line no-undef
     noUiSlider.create(sliderElement, {
       range: item.range,
       start: item.start,
